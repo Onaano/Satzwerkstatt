@@ -133,7 +133,7 @@ body.nosound .spk{display:none}
 .g-stagewrap{min-height:0;min-width:0;display:flex;flex-direction:column;overflow:hidden}
 #stage{flex:1;min-height:0;display:flex;flex-direction:column;padding:.7rem .9rem .3rem;overflow-x:hidden;overflow-y:auto}
 #stage:focus{outline:none}
-.g-foot{flex:none;display:flex;align-items:center;gap:.8rem;padding:.45rem .8rem .55rem;background:rgba(255,250,240,.9);border-top:4px solid rgba(95,61,34,.4)}
+.g-foot{flex:none;display:flex;align-items:center;gap:.8rem;padding:.45rem .8rem calc(.55rem + var(--badge,50px));background:rgba(255,250,240,.9);border-top:4px solid rgba(95,61,34,.4)}
 #fb{flex:1;min-width:0;min-height:3.3rem;display:flex;align-items:center;gap:.6rem;background:var(--paper);border:3px solid var(--line);border-radius:.8rem;padding:.35rem .8rem;font-size:1.02rem;line-height:1.25}
 #fb:empty{opacity:.0}
 #fb.ok{border-color:var(--sage-d);background:#eaf2e3}#fb.hint{border-color:var(--must-d);background:#fbefcf}#fb.info{border-color:var(--petrol);background:var(--petrol-l)}
@@ -284,7 +284,7 @@ body.nosound .spk{display:none}
   .plan{padding:.8rem .4rem .45rem}.plan .row{gap:.65rem .35rem;min-height:0}
   .crate{padding:.45rem .35rem}.crate .row{gap:.4rem .35rem;min-height:0}
   .slot{min-width:2.8rem}
-  #fb{min-height:2.6rem;font-size:.95rem;padding:.25rem .6rem}#fb .fh{font-size:1.02rem}.g-foot{padding:.3rem .5rem .4rem;gap:.5rem}
+  #fb{min-height:2.6rem;font-size:.95rem;padding:.25rem .6rem}#fb .fh{font-size:1.02rem}.g-foot{padding:.3rem .5rem calc(.4rem + var(--badge,50px));gap:.5rem}
   #btn-next{min-width:6.5rem;font-size:1rem;padding:.4rem .8rem}
   .tag{padding:.6rem .7rem .6rem 2.3rem;font-size:1.25rem}.tag:before{left:.7rem}
   .tagwrap{gap:.4rem}
@@ -301,7 +301,7 @@ body.nosound .spk{display:none}
   html{font-size:clamp(12.5px,calc(.9vmin + 8.5px),30px)}
   #stage{padding:.4rem .6rem .2rem}.task{gap:.4rem}.prompt{margin-bottom:.2rem;font-size:1.15rem}
   .g-head{padding:.2rem .5rem}.g-title .st{display:none}
-  #fb{min-height:2.6rem;padding:.2rem .6rem;font-size:.95rem}.g-foot{padding:.3rem .6rem}
+  #fb{min-height:2.6rem;padding:.2rem .6rem;font-size:.95rem}.g-foot{padding:.3rem .6rem calc(.3rem + var(--badge,50px))}
   .st-top{height:clamp(70px,22vh,200px)}
 }
 @media (max-height:700px) and (orientation:landscape){
@@ -310,6 +310,7 @@ body.nosound .spk{display:none}
 }
 @media (max-height:700px) and (orientation:portrait){ .stn .bl{display:none} }
 @media (max-height:760px){ .hcard p{font-size:.88rem;margin:.15rem 0}.hcard .exs{display:none}.sheet{padding:.8rem 1rem .9rem} }
+@media (max-width:560px) and (max-height:680px){ .prog .bhwrap{height:2.5rem}.prog{padding:.1rem .6rem}.g-foot{padding-top:.2rem} }
 @media (prefers-reduced-motion:reduce){ *,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important} .stamp-in,.opt.right .stamp{opacity:1!important} }
 </style>
 </head>
